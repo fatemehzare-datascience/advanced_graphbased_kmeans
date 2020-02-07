@@ -49,7 +49,7 @@ def agkmeans(G, k):
                 try:
                     n = nx.shortest_path_length(G, i, j)
                 except nx.NetworkXNoPath:
-                    n = int('inf')
+                    n = 1000000000000000000000
                 if n < b:
                     df.loc[df['node'] == i, 'shoretest_path_centroid'] = n
                     df.loc[df['node'] == i, 'centroid'] = j
